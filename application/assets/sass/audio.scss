@@ -1,0 +1,167 @@
+.wp-audio-player{
+	background-color: #595959;
+    color: #ffffff;
+}
+.play-audio {
+	.player {
+		padding: 18px 24px;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		width: 100%;
+	}
+	.play-btn {
+		width: 45px;
+		height: 45px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: black;
+		}
+	}
+	.progress {
+		width: 25%;
+		height: 10px;
+		background: #b36f71;
+		border-radius: 6px;
+		cursor: pointer;
+		position: relative;
+	}
+	.progress-fill {
+		height: 10px;
+		width: 0%;
+		background: black;
+		border-radius: 6px;
+	}
+	.controls {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-left: auto;
+	}
+	.controls .icon-sun,
+	.controls .icon-moon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	.toggle {
+		width: 42px;
+		height: 20px;
+		background: white;
+		border-radius: 20px;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.toggle-circle {
+		width: 16px;
+		height: 16px;
+		background: #be1f24;
+		border-radius: 50%;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		transition: left 0.3s ease, background 0.3s ease;
+	}
+
+	.font-controls span {
+		cursor: pointer;
+		padding: 0 4px;
+		font-size: 18px;
+	}
+	.volume {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 110px;
+	}
+	.volume-icon {
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		color: white;
+		opacity: 0.8;
+
+		path{
+			fill: white;
+		}
+
+	}
+	input[type=range] {
+		flex: 1;
+		height: 5px;
+		accent-color: #be1f24;
+	}
+}
+
+
+
+/* TEMA DARK - TOGGLE CIRCLE */
+body.dark .play-audio .toggle-circle {
+    left: 24px;
+    background: #333333;
+}
+
+/* MEDIA QUERIES - MOBILE */
+@media (max-width: 768px) {
+    .play-audio .player {
+        background: #be1f24;
+        padding: 9px 10px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #fff;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .play-audio .play-btn {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: #be1f24;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0px;
+        max-width: 3.9rem;
+    }
+
+    .play-audio .controls {
+        gap: 5px;
+        margin-left: initial;
+    }
+}
+
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+
+	header, main, footer{
+    	background-color: #000000;
+	}
+}
